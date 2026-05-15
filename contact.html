@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>عالم التقنية - تواصل معنا</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    .page-header {
+      background: linear-gradient(135deg, var(--accent2) 0%, var(--primary) 100%);
+      padding: 80px 40px 60px;
+      text-align: center;
+      border-bottom: 3px solid var(--accent);
+    }
+    .page-header h1 { font-size: 2.5rem; color: var(--gold); margin-bottom: 15px; }
+    .page-header p { color: rgba(255,255,255,0.7); font-size: 1.1rem; }
+    .breadcrumb { display: flex; gap: 10px; justify-content: center; margin-top: 20px; font-size: 0.9rem; }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    .breadcrumb span { color: rgba(255,255,255,0.4); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 50px;
+      align-items: start;
+    }
+
+    .contact-info-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 35px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      margin-bottom: 30px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid var(--border);
+    }
+    .contact-item:last-of-type { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .contact-item .ci-icon {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    .contact-item h4 { color: var(--gold); margin-bottom: 5px; font-size: 1rem; }
+    .contact-item p { color: rgba(255,255,255,0.7); font-size: 0.95rem; }
+
+    .form-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 40px;
+    }
+    .form-card h2 { color: var(--gold); margin-bottom: 30px; font-size: 1.6rem; }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .success-msg {
+      display: none;
+      background: rgba(0, 200, 100, 0.1);
+      border: 1px solid rgba(0, 200, 100, 0.3);
+      color: #00c864;
+      padding: 15px 20px;
+      border-radius: 10px;
+      margin-top: 15px;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .map-placeholder {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 60px 40px;
+      text-align: center;
+      margin-top: 40px;
+    }
+    .map-placeholder .map-icon { font-size: 5rem; margin-bottom: 20px; }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 25px;
+      flex-wrap: wrap;
+    }
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 25px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: all 0.3s;
+    }
+    .social-link:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .faq-item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 15px;
+      overflow: hidden;
+    }
+    .faq-q {
+      padding: 20px 25px;
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--gold);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+    .faq-q:hover { color: var(--accent); }
+    .faq-a {
+      padding: 0 25px 20px;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.97rem;
+      line-height: 1.8;
+      display: none;
+    }
+    .faq-item.open .faq-a { display: block; }
+    .faq-item.open .faq-arrow { transform: rotate(180deg); }
+    .faq-arrow { transition: transform 0.3s; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo"><span>⚡</span> عالم <span>التقنية</span></a>
+    <ul>
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="about.html">من نحن</a></li>
+      <li><a href="services.html">خدماتنا</a></li>
+      <li><a href="contact.html" class="active">تواصل معنا</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <h1>📞 تواصل معنا</h1>
+    <p>نحن هنا لمساعدتك — تواصل معنا في أي وقت</p>
+    <div class="breadcrumb">
+      <a href="index.html">الرئيسية</a>
+      <span>/</span>
+      <span>تواصل معنا</span>
+    </div>
+  </div>
+
+  <!-- قسم التواصل الرئيسي -->
+  <section>
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- معلومات التواصل -->
+        <div>
+          <div class="contact-info-card">
+            <h2 style="color: var(--gold); margin-bottom: 30px; font-size: 1.5rem;">معلومات التواصل</h2>
+
+            <div class="contact-item">
+              <div class="ci-icon">📍</div>
+              <div>
+                <h4>العنوان</h4>
+                <p>طريق الملك فهد، حي العليا<br/>الرياض 12211، المملكة العربية السعودية</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="ci-icon">📞</div>
+              <div>
+                <h4>الهاتف</h4>
+                <p>+966 50 000 0000<br/>+966 11 000 0000 (مكتب)</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="ci-icon">📧</div>
+              <div>
+                <h4>البريد الإلكتروني</h4>
+                <p>info@techworld.sa<br/>support@techworld.sa</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="ci-icon">🕐</div>
+              <div>
+                <h4>ساعات العمل</h4>
+                <p>الأحد – الخميس: 9 صباحاً – 6 مساءً<br/>السبت: 10 صباحاً – 2 ظهراً</p>
+              </div>
+            </div>
+          </div>
+
+          <h3 style="color: var(--gold); margin: 30px 0 15px;">تابعنا على</h3>
+          <div class="social-links">
+            <a href="#" class="social-link">𝕏 تويتر</a>
+            <a href="#" class="social-link">📘 فيسبوك</a>
+            <a href="#" class="social-link">📸 إنستغرام</a>
+            <a href="#" class="social-link">💼 لينكدإن</a>
+          </div>
+        </div>
+
+        <!-- نموذج التواصل -->
+        <div class="form-card">
+          <h2>💬 أرسل لنا رسالة</h2>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>الاسم الكامل *</label>
+              <input type="text" id="name" placeholder="اكتب اسمك الكامل" />
+            </div>
+            <div class="form-group">
+              <label>البريد الإلكتروني *</label>
+              <input type="email" id="email" placeholder="example@email.com" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>رقم الهاتف</label>
+              <input type="tel" id="phone" placeholder="+966 5X XXX XXXX" />
+            </div>
+            <div class="form-group">
+              <label>الخدمة المطلوبة</label>
+              <select id="service">
+                <option value="">اختر الخدمة</option>
+                <option>تطوير موقع ويب</option>
+                <option>تطبيق جوال</option>
+                <option>حلول الذكاء الاصطناعي</option>
+                <option>الأمن السيبراني</option>
+                <option>استشارة تقنية</option>
+                <option>أخرى</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>موضوع الرسالة *</label>
+            <input type="text" id="subject" placeholder="موضوع رسالتك" />
+          </div>
+
+          <div class="form-group">
+            <label>الرسالة *</label>
+            <textarea id="message" placeholder="اكتب رسالتك هنا بالتفصيل وسنرد عليك في أقرب وقت..."></textarea>
+          </div>
+
+          <button class="btn" onclick="sendMessage()" style="width: 100%; font-size: 1.1rem; padding: 16px;">
+            📤 إرسال الرسالة
+          </button>
+
+          <div class="success-msg" id="successMsg">
+            ✅ تم إرسال رسالتك بنجاح! سنتواصل معك خلال 24 ساعة.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- خريطة الموقع -->
+      <div class="map-placeholder">
+        <div class="map-icon">🗺️</div>
+        <h3 style="color: var(--gold); margin-bottom: 15px;">موقعنا على الخريطة</h3>
+        <p style="color: rgba(255,255,255,0.6); margin-bottom: 20px;">
+          طريق الملك فهد، حي العليا، الرياض، المملكة العربية السعودية
+        </p>
+        <a href="https://maps.google.com" target="_blank" class="btn btn-outline">
+          📍 فتح على خرائط Google
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- الأسئلة الشائعة -->
+  <section style="background: var(--secondary);">
+    <div class="container">
+      <div class="section-title">
+        <h2>الأسئلة الشائعة</h2>
+        <p>إجابات على أكثر الأسئلة شيوعاً</p>
+      </div>
+
+      <div style="max-width: 800px; margin: 0 auto;">
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            كم يستغرق تطوير موقع ويب احترافي؟
+            <span class="faq-arrow">▼</span>
+          </div>
+          <div class="faq-a">يعتمد الوقت على حجم المشروع وتعقيده. عادةً يستغرق الموقع البسيط من 2-4 أسابيع، بينما المشاريع الكبيرة قد تستغرق من 2-6 أشهر. نضع جدولاً زمنياً واضحاً في بداية كل مشروع.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            هل توفرون خدمة الصيانة والدعم بعد الإطلاق؟
+            <span class="faq-arrow">▼</span>
+          </div>
+          <div class="faq-a">نعم، نقدم باقات دعم وصيانة متنوعة تشمل التحديثات الدورية، إصلاح الأخطاء، وتحسين الأداء. يمكنك الاختيار بين دعم شهري أو سنوي حسب احتياجاتك.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            هل يمكنني تعديل محتوى الموقع بنفسي بعد الإطلاق؟
+            <span class="faq-arrow">▼</span>
+          </div>
+          <div class="faq-a">بالتأكيد! نزودك بلوحة تحكم سهلة الاستخدام ونقدم تدريباً شاملاً عليها حتى تتمكن من إدارة محتوى موقعك باستقلالية تامة.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            ما هي طرق الدفع المتاحة؟
+            <span class="faq-arrow">▼</span>
+          </div>
+          <div class="faq-a">نقبل التحويل البنكي، والبطاقات الائتمانية، وخدمة مدى. نعمل عادةً بنظام دفعتين: 50% عند البدء و50% عند التسليم للمشاريع الصغيرة، مع تقسيمات مرنة للمشاريع الكبيرة.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h4>⚡ عالم التقنية</h4>
+        <p style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">نؤمن بأن التكنولوجيا أداة قوية لبناء مستقبل أفضل.</p>
+      </div>
+      <div>
+        <h4>روابط سريعة</h4>
+        <ul>
+          <li><a href="index.html">الصفحة الرئيسية</a></li>
+          <li><a href="about.html">من نحن</a></li>
+          <li><a href="services.html">خدماتنا</a></li>
+          <li><a href="contact.html">تواصل معنا</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>خدماتنا</h4>
+        <ul>
+          <li><a href="services.html">تطوير المواقع</a></li>
+          <li><a href="services.html">تطبيقات الجوال</a></li>
+          <li><a href="services.html">الذكاء الاصطناعي</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>تواصل معنا</h4>
+        <ul>
+          <li><a href="#">📧 info@techworld.sa</a></li>
+          <li><a href="#">📞 +966 50 000 0000</a></li>
+          <li><a href="#">📍 الرياض، السعودية</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>© 2025 عالم التقنية — جميع الحقوق محفوظة لـ <strong style="color: var(--accent);">اسم المجموعة</strong></p>
+    </div>
+  </footer>
+
+  <script>
+    function sendMessage() {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      if (!name || !email || !message) {
+        alert('الرجاء تعبئة الحقول المطلوبة (الاسم، البريد الإلكتروني، الرسالة)');
+        return;
+      }
+      document.getElementById('successMsg').style.display = 'block';
+      setTimeout(() => {
+        document.getElementById('name').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('phone').value = '';
+        document.getElementById('subject').value = '';
+        document.getElementById('message').value = '';
+      }, 500);
+    }
+
+    function toggleFaq(el) {
+      const item = el.parentElement;
+      item.classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>
