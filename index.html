@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>عالم التقنية - الصفحة الرئيسية</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    .ticker {
+      background: var(--accent);
+      padding: 10px 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .ticker-content {
+      display: inline-block;
+      animation: ticker 20s linear infinite;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+    @keyframes ticker {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100vw); }
+    }
+    .wave {
+      width: 100%;
+      height: 80px;
+      background: var(--secondary);
+      clip-path: ellipse(55% 100% at 50% 0%);
+      margin-top: -1px;
+    }
+    .dark-section {
+      background: var(--secondary);
+    }
+    .highlight {
+      color: var(--accent);
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- شريط التصفح -->
+  <nav>
+    <a href="index.html" class="logo">
+      <span>⚡</span> عالم <span>التقنية</span>
+    </a>
+    <ul>
+      <li><a href="index.html" class="active">الرئيسية</a></li>
+      <li><a href="about.html">من نحن</a></li>
+      <li><a href="services.html">خدماتنا</a></li>
+      <li><a href="contact.html">تواصل معنا</a></li>
+    </ul>
+  </nav>
+
+  <!-- شريط إعلاني -->
+  <div class="ticker">
+    <span class="ticker-content">
+      🚀 مرحباً بكم في عالم التقنية &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+      💡 أحدث الحلول التقنية لمستقبل أفضل &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+      🌐 ابتكار بلا حدود &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+      ⚡ جودة لا مثيل لها في عالم البرمجة
+    </span>
+  </div>
+
+  <!-- القسم الرئيسي (Hero) -->
+  <div class="hero">
+    <div class="hero-content">
+      <h1>مرحباً بك في عالم <span style="color: var(--accent);">التقنية</span> 🚀</h1>
+      <p>
+        نقدم أحدث الحلول التقنية والرقمية لتمكينك من تحقيق أهدافك في العصر الرقمي.
+        انضم إلينا وكن جزءاً من ثورة التكنولوجيا.
+      </p>
+      <a href="services.html" class="btn">استكشف خدماتنا</a>
+      <a href="about.html" class="btn btn-outline">تعرف علينا</a>
+      <div style="margin-top: 50px; border-radius: 16px; overflow: hidden; border: 2px solid var(--border); box-shadow: var(--shadow);">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=900&h=400&fit=crop" alt="فريق تقني" style="width:100%; height:350px; object-fit:cover; border-radius:14px; margin:0;" />
+      </div>
+    </div>
+  </div>
+
+  <!-- قسم الإحصاءات -->
+  <section class="dark-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="number">+500</span>
+          <span class="label">مشروع منجز</span>
+        </div>
+        <div class="stat-item">
+          <span class="number">+200</span>
+          <span class="label">عميل سعيد</span>
+        </div>
+        <div class="stat-item">
+          <span class="number">+10</span>
+          <span class="label">سنوات خبرة</span>
+        </div>
+        <div class="stat-item">
+          <span class="number">24/7</span>
+          <span class="label">دعم فني</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم الخدمات المميزة -->
+  <section>
+    <div class="section-title">
+      <h2>خدماتنا المميزة</h2>
+      <p>نقدم لك أفضل الخدمات التقنية بأعلى معايير الجودة</p>
+    </div>
+    <div class="cards-grid">
+      <div class="card">
+        <span class="icon">💻</span>
+        <h3>تطوير المواقع</h3>
+        <p>نصمم ونطور مواقع ويب احترافية متجاوبة مع جميع الأجهزة بأحدث تقنيات HTML وCSS وJS.</p>
+        <br/>
+        <a href="services.html" class="btn btn-outline">اعرف المزيد</a>
+      </div>
+      <div class="card">
+        <span class="icon">📱</span>
+        <h3>تطبيقات الجوال</h3>
+        <p>نبني تطبيقات موبايل ذكية لنظامي iOS وAndroid تلبي احتياجات عملك الرقمي.</p>
+        <br/>
+        <a href="services.html" class="btn btn-outline">اعرف المزيد</a>
+      </div>
+      <div class="card">
+        <span class="icon">🤖</span>
+        <h3>الذكاء الاصطناعي</h3>
+        <p>نوظّف قوة الذكاء الاصطناعي لتطوير حلول مبتكرة تحل مشكلاتك وترفع كفاءة عملك.</p>
+        <br/>
+        <a href="services.html" class="btn btn-outline">اعرف المزيد</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم مميزاتنا -->
+  <section class="dark-section">
+    <div class="container">
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;">
+        <div>
+          <h2 style="font-size: 2rem; margin-bottom: 25px;">لماذا تختارنا؟</h2>
+          <ul class="features-list">
+            <li>فريق من الخبراء المتخصصين في أحدث التقنيات الرقمية</li>
+            <li>تسليم المشاريع في الوقت المحدد بضمان الجودة الكاملة</li>
+            <li>دعم فني على مدار الساعة لضمان استمرارية عملك</li>
+            <li>أسعار تنافسية وحلول مرنة تناسب جميع الميزانيات</li>
+            <li>خبرة واسعة في تنفيذ المشاريع الحكومية والخاصة</li>
+          </ul>
+        </div>
+        <div class="gallery">
+          <div class="gallery-item img-container">
+            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop" alt="برمجة" style="width:100%;height:100%;object-fit:cover;border-radius:12px;" />
+          </div>
+          <div class="gallery-item img-container">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop" alt="تقنية" style="width:100%;height:100%;object-fit:cover;border-radius:12px;" />
+          </div>
+          <div class="gallery-item img-container">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop" alt="تطوير" style="width:100%;height:100%;object-fit:cover;border-radius:12px;" />
+          </div>
+          <div class="gallery-item img-container">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=300&fit=crop" alt="كود" style="width:100%;height:100%;object-fit:cover;border-radius:12px;" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم آخر المشاريع -->
+  <section>
+    <div class="section-title">
+      <h2>آخر المشاريع</h2>
+      <p>نماذج من أعمالنا المميزة</p>
+    </div>
+    <div class="scroll-container">
+      <div style="display: inline-flex; gap: 20px; padding: 10px;">
+        <div class="card" style="min-width: 280px; white-space: normal; display: inline-block;">
+          <span class="icon">🛒</span>
+          <h3>منصة التسوق الإلكتروني</h3>
+          <p>متجر متكامل بأحدث تقنيات الدفع الآمن</p>
+        </div>
+        <div class="card" style="min-width: 280px; white-space: normal; display: inline-block;">
+          <span class="icon">🏥</span>
+          <h3>نظام إدارة المستشفيات</h3>
+          <p>حل متكامل لإدارة العيادات والمرضى</p>
+        </div>
+        <div class="card" style="min-width: 280px; white-space: normal; display: inline-block;">
+          <span class="icon">📚</span>
+          <h3>منصة التعليم الإلكتروني</h3>
+          <p>بيئة تعليمية تفاعلية للطلاب والمعلمين</p>
+        </div>
+        <div class="card" style="min-width: 280px; white-space: normal; display: inline-block;">
+          <span class="icon">🏗️</span>
+          <h3>نظام إدارة المشاريع</h3>
+          <p>تتبع المشاريع وإدارة الفرق بكفاءة عالية</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- الفوتر -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h4>⚡ عالم التقنية</h4>
+        <p style="color: rgba(255,255,255,0.5); font-size: 0.9rem; line-height: 1.7;">
+          نؤمن بأن التكنولوجيا أداة قوية لبناء مستقبل أفضل للجميع.
+        </p>
+      </div>
+      <div>
+        <h4>روابط سريعة</h4>
+        <ul>
+          <li><a href="index.html">الصفحة الرئيسية</a></li>
+          <li><a href="about.html">من نحن</a></li>
+          <li><a href="services.html">خدماتنا</a></li>
+          <li><a href="contact.html">تواصل معنا</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>خدماتنا</h4>
+        <ul>
+          <li><a href="services.html">تطوير المواقع</a></li>
+          <li><a href="services.html">تطبيقات الجوال</a></li>
+          <li><a href="services.html">الذكاء الاصطناعي</a></li>
+          <li><a href="services.html">الأمن السيبراني</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>تواصل معنا</h4>
+        <ul>
+          <li><a href="#">📧 info@techworld.sa</a></li>
+          <li><a href="#">📞 +966 50 000 0000</a></li>
+          <li><a href="#">📍 الرياض، المملكة العربية السعودية</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>© 2025 عالم التقنية — جميع الحقوق محفوظة لـ <strong style="color: var(--accent);">اسم المجموعة</strong></p>
+    </div>
+  </footer>
+
+</body>
+</html>
